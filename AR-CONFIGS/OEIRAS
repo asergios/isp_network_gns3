@@ -1,0 +1,13 @@
+config t
+
+int f0/0
+no shut
+ip address 10.0.0.10 255.255.255.252
+
+int f0/1
+no shut
+ip address 10.0.2.193 255.255.255.192
+ip address 192.168.1.1 255.255.255.0 secondary
+
+end
+write

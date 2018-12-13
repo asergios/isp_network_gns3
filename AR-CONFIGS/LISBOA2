@@ -1,0 +1,24 @@
+config t
+
+int f0/0
+no shut
+ip address 4.4.4.5 255.255.255.252
+
+int f0/1
+no shut
+ip address 4.4.4.9 255.255.255.252
+
+int f1/0
+no shut
+ip address 10.0.0.2 255.255.255.248
+
+int f1/1
+no shut
+ip address 10.0.0.9 255.255.255.252
+
+int f2/0
+no shut
+ip address 10.2.0.1 255.255.128.0
+
+end
+write
