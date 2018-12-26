@@ -468,8 +468,8 @@
                             "rotation": 0,
                             "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
                             "text": "f0/0",
-                            "x": -2,
-                            "y": 40
+                            "x": -27,
+                            "y": 25
                         },
                         "node_id": "a664ef49-6d35-4ace-9bc4-1f7993e83a70",
                         "port_number": 0
@@ -1470,8 +1470,8 @@
                     "rotation": 0,
                     "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
                     "text": "EMPRESA_B",
-                    "x": -11,
-                    "y": -25
+                    "x": -8,
+                    "y": -20
                 },
                 "name": "EMPRESA_B",
                 "node_id": "c71f4aab-c177-4e49-808a-5945ec22ab92",
@@ -1972,6 +1972,6 @@
     },
     "type": "topology",
     "variables": null,
-    "version": "2.1.10",
-    "zoom": 71
+    "version": "2.1.11",
+    "zoom": 100
 }

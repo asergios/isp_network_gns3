@@ -1,20 +1,37 @@
 config t
 
+! LISBOA 2
 int f0/0
 no shut
 ip address 4.4.4.6 255.255.255.252
 
+! MADRID
 int f0/1
 no shut
 ip address 4.4.4.14 255.255.255.252
 
+! INTERNET CORE
 int f1/0
 no shut
 ip address 1.1.1.2 255.255.255.0
 
+! LISBOA NETWORK
 int f1/1
 no shut
 ip address 65.0.1.1 255.255.255.0
+
+! BGP
+router bgp 40000
+address-family ipv4 unicast
+
+! NEIGHBORS
+
+!! MADRID (EGP)
+neighbor 4.4.4.13 remote-as 20000
+
+!! LISBOA 2 (EGP)
+neighbor 4.4.4.5 remote-as 1000
+neighbor 4.4.4.5 default-originate
 
 end
 write
