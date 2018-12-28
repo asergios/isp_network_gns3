@@ -41,9 +41,11 @@ neighbor 4.4.4.12 remote-as 40000
 
 !! PORTO (EGP)
 neighbor 4.4.4.1 remote-as 1000
+neighbor 4.4.4.1 default-originate
 
 !! LISBOA 2 (EGP)
 neighbor 4.4.4.9 remote-as 1000
+neighbor 4.4.4.9 default-originate
 
 ! NETWORKS
 

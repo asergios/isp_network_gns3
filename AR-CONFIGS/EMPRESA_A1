@@ -1,0 +1,19 @@
+config t
+
+! OSPF EMPRESA A = 10
+router ospf 10
+
+! AVEIRO
+int f0/0
+no shut
+ip ospf 10 area 0
+ip address 10.0.1.2 255.255.255.252
+
+! EMPRESA A1 NETWORK
+int f0/1
+no shut
+ip ospf 10 area 0
+ip address 110.1.1.1 255.255.255.128
+
+end
+write

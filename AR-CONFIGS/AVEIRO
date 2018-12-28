@@ -1,7 +1,14 @@
 config t
 
 ! Enable OSPF1
+! CORE
 router ospf 1
+! EMPRESA A
+router ospf 10
+default-information originate always
+! EMPRESA B
+router ospf 11
+default-information originate always
 
 ! PORTO / LISBOA2
 int f0/0
@@ -18,11 +25,13 @@ ip address 10.2.128.1 255.255.128.0
 int f1/0
 no shut
 ip address 10.0.1.1 255.255.255.252
+ip ospf 10 area 0
 
 ! EmpB
 int f1/1
 no shut
 ip address 10.0.1.5 255.255.255.252
+ip ospf 20 area 0
 
 ! LoopBack
 int lo0
@@ -32,6 +41,9 @@ ip ospf 1 area 0
 ! BGP
 router bgp 1000
 address-family ipv4 unicast
+
+redistribute ospf 10
+redistribute ospf 20
 
 ! NEIGHBORS
 

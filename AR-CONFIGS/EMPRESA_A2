@@ -1,0 +1,24 @@
+config t
+
+! OSPF EMPRESA A = 10
+router ospf 10
+
+! OEIRAS
+int f0/0
+no shut
+ip address 10.0.2.194 255.255.255.192
+
+! EMPRESA A2 NETWORK
+int f0/1
+no shut
+ip ospf 10 area 0
+ip address 110.1.1.129 255.255.255.128
+
+interface Tunnel1
+ip unnumbered f0/0
+ip ospf 10 area 0
+tunnel source f0/0
+tunnel destination 10.0.2.193
+
+end
+write
