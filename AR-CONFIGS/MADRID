@@ -37,7 +37,7 @@ address-family ipv4 unicast
 ! NEIGHBORS
 
 !! LISBOA 1 (EGP)
-neighbor 4.4.4.12 remote-as 40000
+neighbor 4.4.4.14 remote-as 40000
 
 !! PORTO (EGP)
 neighbor 4.4.4.1 remote-as 1000

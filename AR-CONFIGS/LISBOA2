@@ -1,7 +1,14 @@
 config t
 
-! Enable OSPF1
+! Enable MPLS
+ip cef
+mpls traffic-eng tunnels
+mpls ip
+
+! Enable OSPF 1 and mpls traffic-eng feautures
 router ospf 1
+mpls traffic-eng area 0
+mpls traffic-eng router-id lo0
 
 ! LISBOA 1
 int f0/0
@@ -18,12 +25,18 @@ int f1/0
 no shut
 ip ospf 1 area 0
 ip address 10.0.0.2 255.255.255.248
+mpls traffic-eng tunnels
+mpls ip
+ip rsvp bandwidth 102400 102400
 
 ! OEIRAS
 int f1/1
 no shut
 ip ospf 1 area 0
 ip address 10.0.0.9 255.255.255.252
+mpls traffic-eng tunnels
+mpls ip
+ip rsvp bandwidth 102400 102400
 
 ! DATACENTER LISBOA
 int f2/0
@@ -73,12 +86,6 @@ address-family ipv4 unicast
 
 ! AGGREGATE IPs
 
-!! Empresa A
-aggregate-address 110.1.1.0 255.255.255.0 summary-only
-!! Empresa B
-aggregate-address 111.1.1.0 255.255.255.0 summary-only
-!! DataCenters
-aggregate-address 10.2.0.0 255.255.0.0 summary-only
 
 ! REDRISTRIBUTE PATHS FROM OSPF 1
 redistribute ospf 1
