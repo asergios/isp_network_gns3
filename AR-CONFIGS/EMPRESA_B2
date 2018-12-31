@@ -3,22 +3,20 @@ config t
 ! OSPF EMPRESA B = 20
 router ospf 20
 
-! OEIRAS
-int f0/0
-no shut
-ip address 10.0.2.195 255.255.255.192
+! Channel to Oeiras
+int atm1/0.20 point-to-point
+ip add 10.0.2.198 255.255.255.252
+ip ospf 20 area 0
+pvc 20/0
+encapsulation aal5snap
+
 
 ! EMPRESA B2 NETWORK
-int f0/1
+int f0/0
 no shut
 ip ospf 20 area 0
 ip address 111.1.1.129 255.255.255.128
 
-interface Tunnel2
-ip unnumbered FastEthernet0/0
-ip ospf 20 area 0
-tunnel source FastEthernet0/0
-tunnel destination 10.0.2.193
 
 end
 write

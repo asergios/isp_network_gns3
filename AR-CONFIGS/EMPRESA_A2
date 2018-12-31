@@ -1,24 +1,25 @@
 config t
 
 ! OSPF EMPRESA A = 10
-router ospf 10
+router ospf 10 
 
-! OEIRAS
-int f0/0
+! ADSL NETWORK D1
+int atm 1/0
 no shut
-ip address 10.0.2.194 255.255.255.192
+
+! Channel to Oeiras
+int atm1/0.10 point-to-point
+ip add 10.0.2.194 255.255.255.252
+ip ospf 10 area 0
+pvc 10/0
+encapsulation aal5snap
+
 
 ! EMPRESA A2 NETWORK
-int f0/1
+int f0/0
 no shut
 ip ospf 10 area 0
 ip address 110.1.1.129 255.255.255.128
-
-interface Tunnel1
-ip unnumbered f0/0
-ip ospf 10 area 0
-tunnel source f0/0
-tunnel destination 10.0.2.193
 
 end
 write
