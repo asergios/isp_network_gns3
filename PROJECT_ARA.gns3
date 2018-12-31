@@ -1037,18 +1037,18 @@
             },
             {
                 "filters": {},
-                "link_id": "4df6918b-b909-49c0-961b-b76635d6b38c",
+                "link_id": "0f469104-d933-4786-a3f4-9ecfc00f2098",
                 "nodes": [
                     {
                         "adapter_number": 0,
                         "label": {
                             "rotation": 0,
                             "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                            "text": "f0/0",
-                            "x": -1,
-                            "y": 41
+                            "text": "e0",
+                            "x": -23,
+                            "y": 18
                         },
-                        "node_id": "42ebdc23-9832-4848-9e90-bea718da2a58",
+                        "node_id": "0b85bb38-d960-48f6-8bf7-92bbd490799d",
                         "port_number": 0
                     },
                     {
@@ -1056,30 +1056,92 @@
                         "label": {
                             "rotation": 0,
                             "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                            "text": "e2",
-                            "x": 70,
-                            "y": -3
+                            "text": "f0/1",
+                            "x": 68,
+                            "y": 4
                         },
-                        "node_id": "4b268b31-0923-44f9-9d83-9191aad3fd9d",
-                        "port_number": 2
+                        "node_id": "a130a990-edcb-4aa9-a969-59c687254fef",
+                        "port_number": 1
                     }
                 ],
                 "suspend": false
             },
             {
                 "filters": {},
-                "link_id": "d65272f7-46b9-41ec-8667-a2f9fa814473",
+                "link_id": "d1bbd0c6-e8b5-4603-b383-7decd76bd09f",
                 "nodes": [
                     {
                         "adapter_number": 0,
                         "label": {
                             "rotation": 0,
                             "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                            "text": "f0/0",
-                            "x": -5,
-                            "y": 12
+                            "text": "e3",
+                            "x": 66,
+                            "y": 41
                         },
-                        "node_id": "5ef16e79-0036-4d88-8dfb-648c47607f6a",
+                        "node_id": "02397434-a694-48e9-b379-0845391a4218",
+                        "port_number": 3
+                    },
+                    {
+                        "adapter_number": 0,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "e0",
+                            "x": -6,
+                            "y": -1
+                        },
+                        "node_id": "df99f261-3df3-449e-80d4-8c4749b430c5",
+                        "port_number": 0
+                    }
+                ],
+                "suspend": false
+            },
+            {
+                "filters": {},
+                "link_id": "6424a23a-786f-4d34-895c-511267224534",
+                "nodes": [
+                    {
+                        "adapter_number": 0,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "e3",
+                            "x": 63,
+                            "y": -12
+                        },
+                        "node_id": "4b268b31-0923-44f9-9d83-9191aad3fd9d",
+                        "port_number": 3
+                    },
+                    {
+                        "adapter_number": 0,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "e0",
+                            "x": -3,
+                            "y": 64
+                        },
+                        "node_id": "c5ce83c3-befb-4b27-99a1-5cda18353991",
+                        "port_number": 0
+                    }
+                ],
+                "suspend": false
+            },
+            {
+                "filters": {},
+                "link_id": "b3fd6d1e-f4e6-40eb-ac5c-f1718e9e7934",
+                "nodes": [
+                    {
+                        "adapter_number": 0,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "e0",
+                            "x": 69,
+                            "y": 63
+                        },
+                        "node_id": "0b9fc4f3-1e46-4333-bc07-f3d1683c6120",
                         "port_number": 0
                     },
                     {
@@ -1088,10 +1150,10 @@
                             "rotation": 0,
                             "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
                             "text": "e2",
-                            "x": 74,
-                            "y": 25
+                            "x": 6,
+                            "y": -11
                         },
-                        "node_id": "02397434-a694-48e9-b379-0845391a4218",
+                        "node_id": "9762677f-727b-4823-951e-9becb436499c",
                         "port_number": 2
                     }
                 ],
@@ -1351,8 +1413,8 @@
                 },
                 "symbol": ":/symbols/router.svg",
                 "width": 66,
-                "x": -596,
-                "y": 78,
+                "x": -595,
+                "y": 62,
                 "z": 0
             },
             {
@@ -1579,8 +1641,8 @@
                 },
                 "symbol": ":/symbols/ethernet_switch.svg",
                 "width": 72,
-                "x": -743,
-                "y": 128,
+                "x": -702,
+                "y": 157,
                 "z": 0
             },
             {
@@ -2252,8 +2314,8 @@
                 "properties": {},
                 "symbol": ":/symbols/vpcs_guest.svg",
                 "width": 65,
-                "x": -840,
-                "y": 163,
+                "x": -859,
+                "y": 147,
                 "z": 0
             },
             {
@@ -2785,136 +2847,144 @@
                 "properties": {},
                 "symbol": ":/symbols/vpcs_guest.svg",
                 "width": 65,
-                "x": 730,
-                "y": -273,
+                "x": 731,
+                "y": -332,
                 "z": 0
             },
             {
                 "compute_id": "local",
-                "console": 5033,
+                "console": 5037,
                 "console_type": "telnet",
-                "first_port_name": null,
-                "height": 45,
+                "first_port_name": "",
+                "height": 59,
                 "label": {
                     "rotation": 0,
                     "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                    "text": "EMPRESA-A-DNS-TEST",
-                    "x": 74,
-                    "y": 14
+                    "text": "SIP-Proxy-1",
+                    "x": -7,
+                    "y": -25
                 },
-                "name": "EMPRESA-A-DNS-TEST",
-                "node_id": "42ebdc23-9832-4848-9e90-bea718da2a58",
-                "node_type": "dynamips",
+                "name": "SIP-Proxy-1",
+                "node_id": "0b85bb38-d960-48f6-8bf7-92bbd490799d",
+                "node_type": "virtualbox",
                 "port_name_format": "Ethernet{0}",
                 "port_segment_size": 0,
                 "properties": {
-                    "auto_delete_disks": true,
-                    "aux": null,
-                    "clock_divisor": 4,
-                    "disk0": 0,
-                    "disk1": 0,
-                    "dynamips_id": 8,
-                    "exec_area": 64,
-                    "idlemax": 500,
-                    "idlepc": "0x60608040",
-                    "idlesleep": 30,
-                    "image": "c7200-adventerprisek9-mz.151-4.M2.image",
-                    "image_md5sum": "d54b063e3d0b368a702ffb49f497825e",
-                    "mac_addr": "ca08.742f.0000",
-                    "midplane": "vxr",
-                    "mmap": true,
-                    "npe": "npe-400",
-                    "nvram": 512,
-                    "platform": "c7200",
-                    "power_supplies": [
-                        1,
-                        1
-                    ],
+                    "acpi_shutdown": false,
+                    "adapter_type": "Intel PRO/1000 MT Desktop (82540EM)",
+                    "adapters": 1,
+                    "headless": false,
+                    "linked_clone": false,
                     "ram": 512,
-                    "sensors": [
-                        22,
-                        22,
-                        22,
-                        22
-                    ],
-                    "slot0": "C7200-IO-FE",
-                    "slot1": null,
-                    "slot2": null,
-                    "slot3": null,
-                    "slot4": null,
-                    "slot5": null,
-                    "slot6": null,
-                    "sparsemem": true,
-                    "system_id": "FTX0945W0MY"
+                    "use_any_adapter": false,
+                    "vmname": "ubuntu-12.04-server-i386 Clone1_1 Clone"
                 },
-                "symbol": ":/symbols/router.svg",
-                "width": 66,
+                "symbol": ":/symbols/vbox_guest.svg",
+                "width": 65,
+                "x": 376,
+                "y": -327,
+                "z": 0
+            },
+            {
+                "compute_id": "local",
+                "console": 5038,
+                "console_type": "telnet",
+                "first_port_name": "",
+                "height": 59,
+                "label": {
+                    "rotation": 0,
+                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                    "text": "SIP-Client-1",
+                    "x": -7,
+                    "y": -25
+                },
+                "name": "SIP-Client-1",
+                "node_id": "c5ce83c3-befb-4b27-99a1-5cda18353991",
+                "node_type": "virtualbox",
+                "port_name_format": "Ethernet{0}",
+                "port_segment_size": 0,
+                "properties": {
+                    "acpi_shutdown": false,
+                    "adapter_type": "Intel PRO/1000 MT Desktop (82540EM)",
+                    "adapters": 1,
+                    "headless": false,
+                    "linked_clone": false,
+                    "ram": 512,
+                    "use_any_adapter": false,
+                    "vmname": "LabComServer"
+                },
+                "symbol": ":/symbols/vbox_guest.svg",
+                "width": 65,
                 "x": 860,
-                "y": -224,
+                "y": -241,
                 "z": 0
             },
             {
                 "compute_id": "local",
-                "console": 5035,
+                "console": 5039,
                 "console_type": "telnet",
-                "first_port_name": null,
-                "height": 45,
+                "first_port_name": "",
+                "height": 59,
                 "label": {
                     "rotation": 0,
                     "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                    "text": "EMPRESA-B-DNS-TEST",
-                    "x": 75,
-                    "y": 8
+                    "text": "SIP-Client-2",
+                    "x": -7,
+                    "y": -25
                 },
-                "name": "EMPRESA-B-DNS-TEST",
-                "node_id": "5ef16e79-0036-4d88-8dfb-648c47607f6a",
-                "node_type": "dynamips",
+                "name": "SIP-Client-2",
+                "node_id": "df99f261-3df3-449e-80d4-8c4749b430c5",
+                "node_type": "virtualbox",
                 "port_name_format": "Ethernet{0}",
                 "port_segment_size": 0,
                 "properties": {
-                    "auto_delete_disks": true,
-                    "aux": null,
-                    "clock_divisor": 4,
-                    "disk0": 0,
-                    "disk1": 0,
-                    "dynamips_id": 9,
-                    "exec_area": 64,
-                    "idlemax": 500,
-                    "idlepc": "0x60608040",
-                    "idlesleep": 30,
-                    "image": "c7200-adventerprisek9-mz.151-4.M2.image",
-                    "image_md5sum": "d54b063e3d0b368a702ffb49f497825e",
-                    "mac_addr": "ca09.0989.0000",
-                    "midplane": "vxr",
-                    "mmap": true,
-                    "npe": "npe-400",
-                    "nvram": 512,
-                    "platform": "c7200",
-                    "power_supplies": [
-                        1,
-                        1
-                    ],
+                    "acpi_shutdown": false,
+                    "adapter_type": "Intel PRO/1000 MT Desktop (82540EM)",
+                    "adapters": 1,
+                    "headless": false,
+                    "linked_clone": false,
                     "ram": 512,
-                    "sensors": [
-                        22,
-                        22,
-                        22,
-                        22
-                    ],
-                    "slot0": "C7200-IO-FE",
-                    "slot1": null,
-                    "slot2": null,
-                    "slot3": null,
-                    "slot4": null,
-                    "slot5": null,
-                    "slot6": null,
-                    "sparsemem": true,
-                    "system_id": "FTX0945W0MY"
+                    "use_any_adapter": false,
+                    "vmname": "LabComServer Clone"
                 },
-                "symbol": ":/symbols/router.svg",
-                "width": 66,
-                "x": 859,
-                "y": 136,
+                "symbol": ":/symbols/vbox_guest.svg",
+                "width": 65,
+                "x": 860,
+                "y": 154,
+                "z": 0
+            },
+            {
+                "compute_id": "local",
+                "console": 5040,
+                "console_type": "telnet",
+                "first_port_name": "",
+                "height": 59,
+                "label": {
+                    "rotation": 0,
+                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                    "text": "SIP-Proxy-2",
+                    "x": -7,
+                    "y": -25
+                },
+                "name": "SIP-Proxy-2",
+                "node_id": "0b9fc4f3-1e46-4333-bc07-f3d1683c6120",
+                "node_type": "virtualbox",
+                "port_name_format": "Ethernet{0}",
+                "port_segment_size": 0,
+                "properties": {
+                    "acpi_shutdown": false,
+                    "adapter_type": "Intel PRO/1000 MT Desktop (82540EM)",
+                    "adapters": 1,
+                    "headless": false,
+                    "linked_clone": false,
+                    "ram": 512,
+                    "use_any_adapter": false,
+                    "vmname": "ubuntu-12.04-server-i386 Clone1_1 Clone 2"
+                },
+                "symbol": ":/symbols/vbox_guest.svg",
+                "width": 65,
+                "x": -790,
+                "y": 60,
                 "z": 0
             }
         ]

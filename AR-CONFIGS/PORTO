@@ -18,7 +18,9 @@ ip address 4.4.4.1 255.255.255.252
 ! SIP PROXY
 int f0/1
 no shut
+ip ospf 1 area 0
 ip address 10.0.2.129 255.255.255.192
+ip address 2.2.2.1 255.255.255.0 secondary
 
 ! LISBOA 2 / AVEIRO
 int f1/0
