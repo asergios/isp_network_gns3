@@ -1,0 +1,25 @@
+config t
+
+router ospf 1
+
+! ADSL NETWORK D1
+int atm 1/0
+no shut
+
+! Channel to Oeiras
+int atm1/0.100 point-to-point
+ip add 10.0.2.202 255.255.255.252
+ip ospf 1 area 0
+pvc 100/0
+encapsulation aal5snap
+
+! SIP PROXY BACKUP
+int f0/0
+no shut
+ip ospf 1 area 0
+ip address 3.3.3.3 255.255.255.0
+
+ip route 0.0.0.0 0.0.0.0 10.0.2.201 global
+
+end
+write

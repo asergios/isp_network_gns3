@@ -61,6 +61,13 @@ ip ospf 20 area 0
 pvc 20/0
 encapsulation aal5snap
 
+! Channel to BackUpSIP
+int atm1/0.100 point-to-point
+ip add 10.0.2.201 255.255.255.252
+ip ospf 1 area 0
+pvc 100/0
+encapsulation aal5snap
+
 !!!! Client B requested two bi-directional channels, between its two branches, with dedicated bandwidth of 30Mbps.
 ! Tunnels for Client B
 int Tunnel 20

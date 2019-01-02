@@ -3,6 +3,10 @@ config t
 ! OSPF EMPRESA B = 20
 router ospf 20
 
+! ADSL NETWORK D1
+int atm 1/0
+no shut
+
 ! Channel to Oeiras
 int atm1/0.20 point-to-point
 ip add 10.0.2.198 255.255.255.252
