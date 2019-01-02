@@ -22,14 +22,30 @@ ip ospf 1 area 0
 ip address 10.0.2.129 255.255.255.192
 ip address 2.2.2.1 255.255.255.0 secondary
 
-! LISBOA 2 / AVEIRO
-int f1/0
+
+! CORE NETWORK
+int atm 1/0
 no shut
+
+! Channel to LISBOA 2
+int atm1/0.1 point-to-point
+ip add 10.0.0.1 255.255.255.252
 ip ospf 1 area 0
-ip address 10.0.0.1 255.255.255.248
 mpls traffic-eng tunnels
 mpls ip
 ip rsvp bandwidth 102400 102400
+pvc 1/0
+encapsulation aal5snap
+
+! Channel to AVEIRO
+int atm1/0.2 point-to-point
+ip add 10.0.0.13 255.255.255.252
+ip ospf 1 area 0
+mpls traffic-eng tunnels
+mpls ip
+ip rsvp bandwidth 102400 102400
+pvc 2/0
+encapsulation aal5snap
 
 ! LoopBack
 int lo0
@@ -89,6 +105,8 @@ neighbor 10.3.1.3 next-hop-self
 neighbor 10.3.1.4 remote-as 1000
 neighbor 10.3.1.4 update-source lo0
 neighbor 10.3.1.4 next-hop-self
+
+
 
 end
 write

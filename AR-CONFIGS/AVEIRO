@@ -24,14 +24,29 @@ default-information originate always
 router ospf 20
 default-information originate always
 
-! PORTO / LISBOA2
-int f0/0
+! CORE NETWORK
+int atm 2/0
 no shut
+
+! Channel to PORTO
+int atm2/0.2 point-to-point
+ip add 10.0.0.14 255.255.255.252
 ip ospf 1 area 0
-ip address 10.0.0.3 255.255.255.248
 mpls traffic-eng tunnels
 mpls ip
 ip rsvp bandwidth 102400 102400
+pvc 2/0
+encapsulation aal5snap
+
+! Channel to LISBOA
+int atm2/0.3 point-to-point
+ip add 10.0.0.6 255.255.255.252
+ip ospf 1 area 0
+mpls traffic-eng tunnels
+mpls ip
+ip rsvp bandwidth 102400 102400
+pvc 3/0
+encapsulation aal5snap
 
 ! DATACENTER AVEIRO
 int f0/1

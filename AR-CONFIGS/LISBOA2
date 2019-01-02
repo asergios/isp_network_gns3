@@ -20,14 +20,29 @@ int f0/1
 no shut
 ip address 4.4.4.9 255.255.255.252
 
-! PORTO / AVEIRO
-int f1/0
+! CORE NETWORK
+int atm 3/0
 no shut
+
+! Channel to PORTO
+int atm3/0.1 point-to-point
+ip add 10.0.0.2 255.255.255.252
 ip ospf 1 area 0
-ip address 10.0.0.2 255.255.255.248
 mpls traffic-eng tunnels
 mpls ip
 ip rsvp bandwidth 102400 102400
+pvc 1/0
+encapsulation aal5snap
+
+! Channel to AVEIRO
+int atm3/0.3 point-to-point
+ip add 10.0.0.5 255.255.255.252
+ip ospf 1 area 0
+mpls traffic-eng tunnels
+mpls ip
+ip rsvp bandwidth 102400 102400
+pvc 3/0
+encapsulation aal5snap
 
 ! OEIRAS
 int f1/1
@@ -116,6 +131,7 @@ neighbor 10.3.1.3 next-hop-self
 neighbor 10.3.1.4 remote-as 1000
 neighbor 10.3.1.4 update-source lo0
 neighbor 10.3.1.4 next-hop-self
+
 
 end
 write
