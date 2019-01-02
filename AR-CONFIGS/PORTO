@@ -56,7 +56,7 @@ ip ospf 1 area 0
 ip prefix-list ips-privados seq 10 permit 10.0.0.0/8 le 32
 ip prefix-list ips-privados seq 12 permit 172.16.0.0/12 le 32
 ip prefix-list ips-privados seq 14 permit 192.168.0.0/16 le 32
-ip prefix-list ips=privados seq 16 permit 0.0.0.0/0
+ip prefix-list ips-privados seq 16 permit 0.0.0.0/0
 
 !!!! IP traffic for remote SIP proxy 2 (to network netL1) cannot be routed via Porto using the direct peering link to ISP ES.
 ip prefix-list rm-sipProxy-2 seq 10 deny 65.0.1.0/24 le 32

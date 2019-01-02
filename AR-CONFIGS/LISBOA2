@@ -68,14 +68,17 @@ ip ospf 1 area 0
 ip prefix-list ips-privados seq 10 permit 10.0.0.0/8 le 32
 ip prefix-list ips-privados seq 12 permit 172.16.0.0/12 le 32
 ip prefix-list ips-privados seq 14 permit 192.168.0.0/16 le 32
-ip prefix-list ips=privados seq 16 permit 0.0.0.0/0
+ip prefix-list ips-privados seq 16 permit 0.0.0.0/0
+
+! default IP prefix-list
+ip prefix-list default-gt seq 10 permit 0.0.0.0/0
 
 !!!!ISP PT2 should be configured as a non-transit AS 
 ! Only allows as-path empty a.k.a local routes
 ip as-path access-list 1 permit ^$
+
 ! Routes coming from AS 20000
 ip as-path access-list 2 permit _20000$
-
 
 ! ROUTE MAPS
 
@@ -85,13 +88,22 @@ match ip address prefix-list ips-privados
 route-map rm-ips-privados permit 20
 match as-path 1
 
-!! Lower local preference at AS20000 so that Porto is prefered
+!! Lower local preference at AS20000 so that Porto is prefered and Increase on Oeiras direction
 !!!!IP traffic towards all AS20000 networks, should be preferably routed via Porto from Aveiro, and via Lisboa2 from Oeiras.
 route-map lower-as20000 permit 10
 match as-path 2
 set local-preference 50
 route-map lower-as20000 permit 20
 
+route-map increase-as20000 permit 10
+match as-path 2
+set local-preference 200
+route-map increase-as20000 permit 20
+
+! Increase local preference of AS40000 for traffic to internet
+route-map increase-40000 permit 10
+match ip address prefix-list default-gt
+set local-preference 200
 
 ! BGP
 router bgp 1000
@@ -114,6 +126,7 @@ neighbor 4.4.4.10 route-map rm-ips-privados out
 !! LISBOA 1 (EGP)
 neighbor 4.4.4.6 remote-as 40000
 neighbor 4.4.4.6 route-map rm-ips-privados out
+neighbor 4.4.4.6 route-map increase-40000 in
 
 !! PORTO (IGP)
 neighbor 10.3.1.1 remote-as 1000
@@ -131,6 +144,7 @@ neighbor 10.3.1.3 next-hop-self
 neighbor 10.3.1.4 remote-as 1000
 neighbor 10.3.1.4 update-source lo0
 neighbor 10.3.1.4 next-hop-self
+neighbor 10.3.1.1 route-map increase-as20000 out
 
 
 end
