@@ -58,6 +58,7 @@ int f2/0
 no shut
 ip ospf 1 area 0
 ip address 10.2.0.1 255.255.128.0
+ip address 9.9.9.1 255.255.255.0 secondary
 
 ! LoopBack
 int lo0
